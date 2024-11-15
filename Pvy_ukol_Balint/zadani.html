@@ -1,0 +1,516 @@
+<!doctype html>
+<html lang="cs">
+    <head>
+        <title>Základy JS</title>
+        <!-- Required meta tags -->
+        <meta charset="utf-8" />
+        <meta
+            name="viewport"
+            content="width=device-width, initial-scale=1, shrink-to-fit=no"
+        />
+
+        <!-- Bootstrap CSS -->
+        <link
+            rel="stylesheet"
+            href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+            integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+            crossorigin="anonymous"
+        />
+    </head>
+
+    <body>
+        <header class="jumbotron jumbotron-fluid text-center bg-primary">
+            <h1 class="display-2 text-white">Základy JS - opakování</h1>
+        </header>
+        <main class="container-fluid">
+            <div class="row">
+                <div class="col-sm-6 bg-dark text-light p-5">
+                    <h2>1: Co je JavaScript a k jakým účelům se používá?</h2>
+                    <blockquote class="blockquote">
+                        <p>
+                            Doplň vhodné odpovědi a využij k tomu nečíslovaného
+                            seznamu.
+                        </p>
+                        <p class="text-warning">
+                            Použij v textu aspoň 3 internetové odkazy na
+                            zajímavé příklady využití JS!
+                        </p>
+                    </blockquote>
+                    <div class="bg-info p-3">
+                        <ul>
+                            <li><a href="https://www.sspu-opava.cz/cs/">SŠPU Opava</a></li>
+                            <li><a href="https://www.w3schools.com/js/default.asp">JavaScript</a></li>
+                            <li><a href="https://cs.wikipedia.org/wiki/Hlavn%C3%AD_strana">Wikipedia</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-sm-6 bg-secondary text-light p-5">
+                    <h2>
+                        2: Jaká pravidla platí pro psaní kódu v JavaScriptu?
+                    </h2>
+                    <blockquote class="blockquote">
+                        <p>
+                            Napiš aspoň pět zásad ve podobě číslovaného seznamu.
+                        </p>
+                        <p class="text-warning">Použij angličtinu!</p>
+                    </blockquote>
+                    <div class="bg-info p-3">
+                        <ol>
+                            <li>semi-colons are not necessary</li>
+                            <li>write your variable names right</li>
+                            <li>
+                                cannot use constants before declaring them (not
+                                just constants)
+                            </li>
+                            <li>as long as it works, dont touch it</li>
+                            <li>console.log() is best debugger</li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+            <hr />
+            <div class="row">
+                <div class="col-sm-6 bg-dark text-light p-5">
+                    <h2>
+                        3: Jak je možné propojit JavaScript s webovou stránkou?
+                    </h2>
+                    <blockquote class="blockquote">
+                        <p>Doplňte další možnosti ve formě kódu.</p>
+                        <p class="text-warning">Opatřete kód poznámkami!</p>
+                    </blockquote>
+                    <div class="bg-light p-3">
+                        <code>
+                            // 1. Vložit kód do tagu script<br />
+                            &lt;script&gt;console.log('Hello');&lt;/script&gt;<br />  
+                            // 2. Import Javascriptu jako externí soubor<br />
+                            &lt;script src="scripts.js"&gt;&lt;/script&gt;<br />
+                            // 3. Použít DOM API pro manipulaci s prvky<br />
+                            document.getElementById('element').textContent = 'Hello World';
+                        </code>
+                    </div>
+                </div>
+                <div class="col-sm-6 bg-secondary text-light p-5">
+                    <h2>4: Jak je možné v JavaScriptu deklarovat proměnné?</h2>
+                    <blockquote class="blockquote">
+                        <p>
+                            Uveďte na příkladech různé datové typy, které je
+                            možné využívat v JS.
+                        </p>
+                        <p class="text-warning">
+                            Doplňte chybějící kód/text podle vzoru úvodních dvou
+                            řádků!
+                        </p>
+                    </blockquote>
+                    <div class="bg-light p-3">
+                        <code>
+                            let x = 0; // s přiřazením hodnoty<br>
+                            let x; // bez přiřazení hodnoty<br>
+                            let x = null; // hodnota null<br>
+                            let x = 1; // celé číslo (typ number)<br>
+                            let x = 1.22; // reálné číslo (typ number)<br>
+                            let x = 1.44e+4; // zápis desetinného čísla pomocí exponentu<br>
+                            let x = "string"; // typ string<br>
+                            let prestupny = false; // typ boolean<br>
+
+                            let y = {name: "John", age: 30}; // objekt<br>
+                            let z = [1, 2, 3, 4]; // pole (array)<br>
+                            let f = function() { return "Hello World"; }; // funkce<br>
+                            let sym = Symbol("sym"); // symbol<br>
+                            let bigInt = 1234567890123456789012345678901234567890n; // velké celé číslo (typ BigInt)<br>
+
+                        </code>
+                    </div>
+                </div>
+            </div>
+            <hr />
+            <div class="row">
+                <div class="col-sm-6 bg-dark text-light p-5">
+                    <h2>5: Jaké operátory můžeme používat v JavaScriptu?</h2>
+                    <blockquote class="blockquote">
+                        <p>
+                            Vypište operátory, které patří do uvedených skupin.
+                        </p>
+                        <p class="text-warning">
+                            U méně obvyklých operátorů dopište do závorky jejich
+                            význam!
+                        </p>
+                    </blockquote>
+                    <div class="bg-light text-danger p-3">
+                        <h4>Matematické</h4>
+                        <code>
+                            +, -, *, /, % (modulo - zbytek po celočíselném
+                            dělení), ** (umocnění)
+                        </code>
+                        <h4>Přiřazovací</h4>
+                        <code> +=,-= </code>
+                        <h4>Logické</h4>
+                        <code> ! && || </code>
+                        <h4>Porovnávací</h4>
+                        <code> ==, ===, !=, !==, >, <, >=,<= </code>
+                        <h4>Bitové</h4>
+                        <code> ^ & | </code>
+                        <h4>Typové</h4>
+                        <code> typeof (typ proměnné), instanceof (...) </code>
+                    </div>
+                </div>
+                <div class="col-sm-6 bg-secondary text-light p-5">
+                    <h2>6: Která popup okna lze využít v JavaScriptu?</h2>
+                    <blockquote class="blockquote">
+                        <p>
+                            K uvedeným příkladům připište do poznámky, co se
+                            stane na webové stránce.
+                        </p>
+                        <p class="text-warning">
+                            Na konci doplňte aspoň dvě varování, proč bychom se
+                            měli vyhýbat použití popup oken v reálných webových
+                            aplikacích.
+                        </p>
+                    </blockquote>
+                    <div class="bg-light text-danger p-3">
+                        <h4>alert()</h4>
+                        <code>
+                            popup okno s moznosti OK a textem nize uvedenym
+                            alert('Nezadal jsi správné heslo!');
+                        </code>
+                        <h4>prompt()</h4>
+                        <code>
+                            /* Do proměnné password vloží heslo zadané
+                            uživatelem */<br />
+                            let password = prompt('give pswd pls');
+                        </code>
+                        <h4>confirm()</h4>
+                        <code>
+                            objevi se popuk okno s vyberem "Cancel"/"OK" - pokud
+                            se klikne na OK, budeme presmerovani if
+                            (confirm('Chceš přejít na stránky Youtube.com?'))
+                            location.href='https://www.youtube.com/';
+                        </code>
+                        <hr />
+                        <p class="alert alert-primary" role="alert">
+                            Varování: popup windows block js
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <hr />
+            <div class="row">
+                <div class="col-sm-6 bg-dark text-light p-5">
+                    <h2>7: Textové výstupy a spojování znakových řetězců</h2>
+                    <blockquote class="blockquote">
+                        <p>
+                            Vložte kód v JS, který do oddílu určeného pro řešení
+                            tohoto úkolu vypíše:
+                        </p>
+                        <ol>
+                            <li>
+                                Řetězec obsahující spojení pozdravu s proměnnými
+                                obsahujícími vaše jméno a příjmení.
+                            </li>
+                            <li>
+                                Řetězec obsahující informace o váze a výšce (s
+                                využitím tzv.
+                                <a
+                                    href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Template_literals"
+                                    >template literals</a
+                                >).
+                            </li>
+                            <li>
+                                Řetězec obsahující příklad escape sekvencí -
+                                uvozovky.
+                            </li>
+                        </ol>
+                    </blockquote>
+                    <div class="bg-info p-3" id="sedmy">
+                        <p>Zde bude řešení.</p>
+                    </div>
+                    <script>
+                        const hello = "Zdravim,";
+
+                        let jmeno = "Matěj",
+                            prijmeni = "Balint";
+                        let vaha = 67,
+                            vyska = 182;
+                        let vystup = hello + " " + jmeno + " " + prijmeni;
+                        console.log(vystup);
+
+                        const sedmy = document.getElementById("sedmy");
+                        sedmy.innerText = vystup;
+                    </script>
+                </div>
+                <div class="col-sm-6 bg-secondary text-light p-5">
+                    <h2>8: Reakce na uživatelskou událost</h2>
+                    <blockquote class="blockquote">
+                        <p>Napište krátký skript, který:</p>
+                        <ul>
+                            <li>
+                                Po najetí kurzoru myši nad zvýrazněnou oblastí
+                                provede změnu barvy i velikosti textu.
+                            </li>
+                            <li>
+                                Když kurzor myši opustí zvýrazněnou oblast,
+                                nastaví se vše do původního stavu.
+                            </li>
+                        </ul>
+                    </blockquote>
+                    <div class="bg-icnfo p-3" id="osmy">
+                        Oblast myších zájmů
+                    </div>
+                    <script>
+                        const osmy = document.getElementById("osmy");
+
+                        function changeColor(r, g, b) {
+                            osmy.style.backgroundColor = `rgb(r,g,b)`;
+                        }
+                        osmy.addEventListener(
+                            "mouseenter",
+                            changeColor(255, 255, 255),
+                        );
+                        osmy.addEventListener(
+                            "mouseleave",
+                            changeColor(0, 0, 0),
+                        );
+                    </script>
+                </div>
+            </div>
+            <hr />
+            <div class="row">
+                <div class="col-sm-6 bg-dark text-light p-5">
+                    <h2>9: Podmínka if a funkce</h2>
+                    <blockquote class="blockquote">
+                        <p>
+                            Vložte kód v JS, který do konzole vypíše informaci,
+                            zda zadané číslo je liché, sudé, nebo nula:
+                        </p>
+                        <ol>
+                            <li>
+                                Po kliknutí na tlačítko "Zadej číslo" zadá
+                                uživatel do popup okna číslo.
+                            </li>
+                            <li>
+                                Funkce "sudeLiche" vrátí vyhodnocení
+                                "sudosti/lichosti" čísla.
+                            </li>
+                            <li>
+                                Správnost řešení ověřte výpisem výsledku do
+                                konzole.
+                            </li>
+                        </ol>
+                    </blockquote>
+                    <div class="bg-info p-3">
+                        <button onclick="odd_even()">Zadej číslo</button>
+                    </div>
+                    <script>
+                        function odd_even() {
+                            input = prompt("Number - odd/even: ", "");
+                            input = parseInt(input);
+                            if (isNaN(input)) {
+                                console.log("Invalid input");
+                            } else if (input % 2 == 0) {
+                                console.log("Input is even");
+                            } else {
+                                console.log("Input is odd");
+                            }
+                        }
+                    </script>
+                </div>
+                <div class="col-sm-6 bg-secondary text-light p-5">
+                    <h2>10: Větvená podmínka switch a funkce</h2>
+                    <blockquote class="blockquote">
+                        <p>
+                            Vložte kód v JS, který do konzole vypíše aktuální
+                            den v týdnu:
+                        </p>
+                        <ol>
+                            <li>
+                                Po kliknutí na odkaz "Vypiš den" se vyvolá
+                                funkce "denVTydnu".
+                            </li>
+                            <li>
+                                Součástí funkce "denVTydnu" je zjištění
+                                aktuálního data (pomocí objektu Date).
+                            </li>
+                            <li>
+                                Pomocí funkce bude zjištěno číslo dne v týdnu.
+                            </li>
+                            <li>
+                                S využitím příkazu switch se vypíše český název
+                                dne (pro všední dny), nebo údaj "víkend" pro
+                                sobotu a neděli.
+                            </li>
+                            <li>
+                                Správnost řešení ověřte výpisem výsledku do
+                                popup okna.
+                            </li>
+                        </ol>
+                    </blockquote>
+                    <button class="bg-info p-3" id="getDay">Vypiš den</button>
+                    <script>
+                        const id = document.getElementById("getDay");
+                        id.onclick = denVTydnu;
+
+                        function denVTydnu() {
+                            let dayName = "";
+                            switch (new Date().getDay()) {
+                                case 1:
+                                    dayName = "pondělí";
+                                    break;
+                                case 2:
+                                    dayName = "úterý";
+                                    break;
+                                case 3:
+                                    dayName = "středa";
+                                    break;
+                                case 4:
+                                    dayName = "čtvrtek";
+                                    break;
+                                case 5:
+                                    dayName = "pátek";
+                                    break;
+                                default:
+                                    dayName = "vikend";
+                                    break;
+                            }
+
+                            alert(dayName);
+                        }
+                    </script>
+                </div>
+            </div>
+            <hr />
+            <div class="row">
+                <div class="col-sm-6 bg-dark text-light p-5">
+                    <h2>11: Cyklus for ve funkci</h2>
+                    <blockquote class="blockquote">
+                        <p>
+                            Vytvořte v JS funkci, která vytvoří seznam
+                            přestupných let mezi dvěma letopočty.
+                        </p>
+                    </blockquote>
+                    <div class="bg-info p-3" id="jedenacty"></div>
+                    <script>
+                        function prestupnyRok(MIN, MAX) {
+                            let out = "<ul>\n";
+                            for (let i = MIN; i <= MAX; i++) {
+                                if (
+                                    i % 4 == 0 &&
+                                    (i % 100 != 0 || i % 400 == 0)
+                                )
+                                    out = out + `<li>${i}</li>\n`;
+                            }
+                            return out + "</ul>";
+                        }
+                        document.getElementById("jedenacty").innerHTML =
+                            prestupnyRok(1900, 2000);
+                    </script>
+                </div>
+                <div class="col-sm-6 bg-secondary text-light p-5">
+                    <h2>12: Cyklus while ve funkci</h2>
+                    <blockquote class="blockquote">
+                        <p>
+                            Vytvořte v JS funkci, která zjistí, zda náhodně
+                            zadané číslo je prvočíslem:
+                        </p>
+                    </blockquote>
+                    <div class="bg-info p-3" id="dvanacty"></div>
+                    <script>
+                        function checkAndGen(
+                            num = Math.round(Math.random() * 100),
+                        ) {
+                            let number = num;
+                            // check if number is equal to 1
+                            if (number === 1) {
+                                console.log(
+                                    "1 není prvočíslo ani složené číslo.",
+                                );
+                            }
+
+                            // check if number is greater than 1
+                            else if (number > 1) {
+                                // looping through 2 to number/2
+                                for (let i = 2; i <= number / 2; i++) {
+                                    if (number % i == 0) {
+                                        return `${num} není prvočíslo`;
+                                        break;
+                                    }
+                                }
+                            }
+                            return `${num} je prvočíslo`;
+                        }
+                        document.getElementById("dvanacty").innerHTML =
+                            checkAndGen();
+                    </script>
+                </div>
+            </div>
+            <hr />
+            <div class="row">
+                <div class="col-sm-6 bg-dark text-light p-5">
+                    <h2>13: Datum a čas, využití pole</h2>
+                    <blockquote class="blockquote">
+                        <p>
+                            Vytvořte v JS funkci, která bude vypisovat časové a
+                            datové údaje.
+                        </p>
+                    </blockquote>
+                    <div class="bg-info p-3" id="trinacty"></div>
+                    <script>
+                        const trinacty = document.getElementById("trinacty");
+
+                        function time(id) {
+                            const time = new Date();
+
+                            id.innerHTML = `${time.getDate()}. ${time.getMonth() + 1}. ${time.getFullYear()}.
+                                            ${time.getHours()}:${time.getMinutes()}:${time.getSeconds()}`;
+                        }
+
+                        time(trinacty);
+                    </script>
+                </div>
+                <div class="col-sm-6 bg-secondary text-light p-5">
+                    <h2>14: Časovač a náhodná změna obrázků</h2>
+                    <blockquote class="blockquote">
+                        <p>
+                            Vytvořte v JS funkci, která zajistí, náhodnou změnu
+                            obrázků po 3 sekundách:
+                        </p>
+                    </blockquote>
+                    <div class="bg-info p-3 id=ctrnacty">
+                        <img src="hrad.webp" class="img-fluid" alt="foto" id="foto"/>
+                    </div>
+                    </div>
+                    <script>
+                        const images = ["img/hrad.webp", "img/praha.jpg", "img/staromak.jpg", "img/vltava.jpg"];
+                        const imgElement = document.getElementById("foto");
+
+                        function changeImage() {
+                          const randomIndex = Math.floor(Math.random() * images.length)
+                          imgElement.src = images[randomIndex];
+                        }
+
+                        setInterval(changeImage, 3000);
+                    </script>
+                    
+                </div>
+            </div>
+        </main>
+        <footer class="text-center mt-5">
+          Matěj Balint, třída IT2
+        </footer>
+        <!-- Optional JavaScript -->
+        <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+        <script
+            src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+            integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+            crossorigin="anonymous"
+        ></script>
+        <script
+            src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+            integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+            crossorigin="anonymous"
+        ></script>
+        <script
+            src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+            integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+            crossorigin="anonymous"
+        ></script>
+    </body>
+</html>
